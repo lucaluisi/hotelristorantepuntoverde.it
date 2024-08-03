@@ -10,7 +10,7 @@ import Image7 from "../../../../public/rooms/7.jpg";
 import Image8 from "../../../../public/rooms/8.jpg";
 
 import Image from "next/image";
-import style from "./page.module.scss";
+import style from "./style.module.scss";
 import { useRef, MouseEvent } from "react";
 import gsap from "gsap";
 import { playfair } from "../fonts";
@@ -70,7 +70,7 @@ export default function RoomsSection() {
       onMouseMove={(e: MouseEvent) => {
         manageMouseMove(e);
       }}
-      className="min-h-dvh min-w-full overflow-hidden relative flex items-center justify-center mt-[20vh] mb-[20vh]"
+      className="min-h-dvh min-w-full overflow-hidden relative flex items-center justify-center my-[20vh]"
     >
       <div ref={plane1} className={`${style.plane} brightness-[70%] z-30`}>
         <Image alt="image" src={Image1} className="left-[90%] top-[70%]" />

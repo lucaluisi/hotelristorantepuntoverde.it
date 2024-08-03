@@ -5,6 +5,7 @@ import HeroSection from "./ui/Hero/HeroSection";
 import PoolSection from "./ui/Pool/PoolSection";
 import RoomsSection from "./ui/Rooms/RoomsSection";
 import Lenis from "@studio-freight/lenis";
+import BhoSection from "./ui/Bho/BhoSection";
 
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
+      <BhoSection />
       <RoomsSection />
       <PoolSection />
       <div className="h-[100vh]"></div>
