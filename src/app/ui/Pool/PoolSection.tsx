@@ -18,11 +18,11 @@ export default function PoolSection() {
   const container = useRef(null);
   const { scrollYProgress: scrollYProgressImages } = useScroll({
     target: container,
-    offset: ["start", "70%"],
+    offset: ["start", "60%"],
   });
   const { scrollYProgress: scrollYProgressText } = useScroll({
     target: container,
-    offset: ["50%", "70%"],
+    offset: ["40%", "60%"],
   });
 
   const scale4 = useTransform(scrollYProgressImages, [0, 1], [1, 4]);
@@ -30,7 +30,12 @@ export default function PoolSection() {
   const scale6 = useTransform(scrollYProgressImages, [0, 1], [1, 6]);
   const scale8 = useTransform(scrollYProgressImages, [0, 1], [1, 8]);
   const scale9 = useTransform(scrollYProgressImages, [0, 1], [1, 9]);
-  const textParallax = useTransform(scrollYProgressText, [1, 0], ["80vh", "100vh"], {ease: circOut});
+  const textParallax = useTransform(
+    scrollYProgressText,
+    [1, 0],
+    ["80vh", "100vh"],
+    { ease: circOut }
+  );
 
   const pictures = [
     {
@@ -77,8 +82,13 @@ export default function PoolSection() {
             </motion.div>
           );
         })}
-        <motion.h2 style={{ y: textParallax }} className={`${playfair.className} text-8xl text-center z-40`}>
-        Concediti un momento di puro piacere<br/>nella nostra piscina salata
+        <motion.h2
+          style={{ y: textParallax }}
+          className={`${playfair.className} text-8xl text-center z-40`}
+        >
+          Concediti un momento di puro piacere
+          <br />
+          nella nostra piscina salata
         </motion.h2>
       </div>
     </div>
