@@ -1,18 +1,18 @@
 "use client";
 
-import Image2 from "../../../../public/rooms/2.jpg";
-import Image3 from "../../../../public/rooms/3.jpg";
-import Image4 from "../../../../public/rooms/4.jpg";
-import Image5 from "../../../../public/rooms/5.jpg";
-import Image6 from "../../../../public/rooms/6.jpg";
-import Image7 from "../../../../public/rooms/7.jpg";
-import PoolImage from "../../../../public/pool/piscina.jpg";
+import Image2 from "../../../../../public/rooms/2.jpg";
+import Image3 from "../../../../../public/rooms/3.jpg";
+import Image4 from "../../../../../public/rooms/4.jpg";
+import Image5 from "../../../../../public/rooms/5.jpg";
+import Image6 from "../../../../../public/rooms/6.jpg";
+import Image7 from "../../../../../public/rooms/7.jpg";
+import PoolImage from "../../../../../public/pool/piscina.jpg";
 
 import styles from "./style.module.scss";
 import Image from "next/image";
 import { useScroll, useTransform, motion, circOut } from "framer-motion";
 import { useRef } from "react";
-import { playfair } from "../fonts";
+import { playfair } from "@/app/ui/fonts";
 
 export default function PoolSection() {
   const container = useRef(null);
