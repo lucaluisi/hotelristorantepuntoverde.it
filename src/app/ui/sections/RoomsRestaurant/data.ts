@@ -27,8 +27,8 @@ export const restaurantImages = {
   img2: RestaurantImage2,
   img3: RestaurantImage3,
   img4: RestaurantImage4,
-  // img5: RestaurantImage5,
-  // img6: RestaurantImage6,
-  // img7: RestaurantImage7,
-  // img8: RestaurantImage8,
+  img5: RestaurantImage1,
+  img6: RestaurantImage2,
+  img7: RestaurantImage3,
+  img8: RestaurantImage4,
 };

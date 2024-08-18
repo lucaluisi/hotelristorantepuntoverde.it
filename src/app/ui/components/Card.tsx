@@ -1,6 +1,5 @@
 import { MotionValue, useTransform, motion } from "framer-motion";
 import { ReactNode } from "react";
-import styles from "./style.module.scss";
 
 export default function Card({
   i,

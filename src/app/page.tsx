@@ -4,9 +4,9 @@ import { useEffect } from "react";
 import HeroSection from "./ui/sections/Hero/HeroSection";
 import PoolSection from "./ui/sections/Pool/PoolSection";
 import RoomsRestaurantSection from "./ui/sections/RoomsRestaurant/RoomsRestaurantSection";
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 import BhoSection from "./ui/sections/Bho/BhoSection";
-
+import FormSection from "./ui/sections/Form/FormSection";
 
 export default function Home() {
   // smooth scroll
@@ -24,6 +24,7 @@ export default function Home() {
       <BhoSection />
       <RoomsRestaurantSection />
       <PoolSection />
+      <FormSection />
       <div className="h-[100vh]"></div>
     </main>
   );
