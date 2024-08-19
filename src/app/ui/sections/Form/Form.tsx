@@ -8,7 +8,7 @@ import { playfair } from "../../fonts";
 import { sendForm, State } from "@/lib/actions";
 import { useActionState } from "react";
 
-export default function FormSection() {
+export default function Form() {
   const initialState: State = { message: null, errors: {} };
   const [state, formAction] = useActionState(sendForm, initialState);
 

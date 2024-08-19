@@ -5,7 +5,7 @@ import Card from "../../components/Card";
 import FloatingImages from "../../components/FloatingImages";
 import { roomsImages, restaurantImages } from "./data";
 
-export default function RoomsRestaurantSection() {
+export default function RoomsRestaurant() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,

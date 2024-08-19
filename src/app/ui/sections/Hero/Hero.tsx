@@ -2,7 +2,7 @@ import { playfair } from "@/app/ui/fonts";
 import { motion, useScroll, useTransform, circIn } from "framer-motion";
 import { useRef } from "react";
 
-export default function HeroSection() {
+export default function Hero() {
   const container = useRef(null);
   const { scrollYProgress: scrollYProgressOpacity } = useScroll({
     target: container,

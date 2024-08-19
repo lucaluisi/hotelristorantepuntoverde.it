@@ -14,7 +14,7 @@ import { useScroll, useTransform, motion, circOut } from "framer-motion";
 import { useRef } from "react";
 import { playfair } from "@/app/ui/fonts";
 
-export default function PoolSection() {
+export default function Pool() {
   const container = useRef(null);
   const { scrollYProgress: scrollYProgressImages } = useScroll({
     target: container,

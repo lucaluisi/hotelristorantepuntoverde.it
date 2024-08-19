@@ -13,7 +13,7 @@ function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-export default function BhoSection() {
+export default function Bho() {
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const { scrollYProgress: scrollYProgress1 } = useScroll({ target: ref1 });

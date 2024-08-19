@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect } from "react";
-import HeroSection from "./ui/sections/Hero/HeroSection";
-import PoolSection from "./ui/sections/Pool/PoolSection";
-import RoomsRestaurantSection from "./ui/sections/RoomsRestaurant/RoomsRestaurantSection";
+import Hero from "./ui/sections/Hero/Hero";
+import Pool from "./ui/sections/Pool/Pool";
+import RoomsRestaurant from "./ui/sections/RoomsRestaurant/RoomsRestaurant";
 import Lenis from "lenis";
-import BhoSection from "./ui/sections/Bho/BhoSection";
-import FormSection from "./ui/sections/Form/FormSection";
+import Bho from "./ui/sections/Bho/Bho";
+import Form from "./ui/sections/Form/Form";
+import Footer from "./ui/sections/Footer/Footer";
 
 export default function Home() {
   // smooth scroll
@@ -20,12 +21,12 @@ export default function Home() {
   });
   return (
     <main>
-      <HeroSection />
-      <BhoSection />
-      <RoomsRestaurantSection />
-      <PoolSection />
-      <FormSection />
-      <div className="h-[100vh]"></div>
+      <Hero />
+      <Bho />
+      <RoomsRestaurant />
+      <Pool />
+      <Form />
+      <Footer />
     </main>
   );
 }

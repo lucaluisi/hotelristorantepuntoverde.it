@@ -10,7 +10,6 @@ export default function Card({
   targetScale,
 }: {
   i: number;
-  text: string;
   content: ReactNode;
   color: string;
   progress: MotionValue;
