@@ -22,7 +22,7 @@ export default function RoomsRestaurant() {
               Coccola te stesso in camere luminose e
             </H3>
             <H3 className="text-center">
-              accoglienti dopo un'emozionante giornata di
+              accoglienti dopo un&apos;emozionante giornata di
             </H3>
             <H3 className="text-center">esplorazione locale</H3>
           </div>
@@ -38,7 +38,7 @@ export default function RoomsRestaurant() {
               Coccola te stesso in camere luminose e
             </H3>
             <H3 className="text-center">
-              accoglienti dopo un'emozionante giornata di
+              accoglienti dopo un&apos;emozionante giornata di
             </H3>
             <H3 className="text-center">esplorazione locale</H3>
           </div>
