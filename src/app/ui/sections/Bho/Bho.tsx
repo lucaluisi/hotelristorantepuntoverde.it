@@ -30,7 +30,7 @@ export default function Bho() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{
-              duration: .6,
+              duration: 0.6,
               stiffness: 20,
               damping: 15,
               mass: 2,
@@ -50,7 +50,7 @@ export default function Bho() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{
-              duration: .6,
+              duration: 0.6,
               stiffness: 20,
               damping: 15,
               mass: 2,
@@ -87,7 +87,7 @@ export default function Bho() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{
-              duration: .6,
+              duration: 0.6,
               stiffness: 20,
               damping: 15,
               mass: 2,
@@ -107,7 +107,7 @@ export default function Bho() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{
-              duration: .6,
+              duration: 0.6,
               stiffness: 20,
               damping: 15,
               mass: 2,
@@ -124,6 +124,12 @@ export default function Bho() {
           </motion.div>
         </div>
         <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.4,
+          }}
           style={{ y: y2 }}
           className={`${playfair.className} z-30 text-8xl text-center absolute left-[30%]`}
         >

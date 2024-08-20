@@ -13,6 +13,7 @@ import Image from "next/image";
 import { useScroll, useTransform, motion, circOut } from "framer-motion";
 import { useRef } from "react";
 import { playfair } from "@/app/ui/fonts";
+import { H2 } from "@/components/ui/text";
 
 export default function Pool() {
   const container = useRef(null);
@@ -33,7 +34,7 @@ export default function Pool() {
   const textParallax = useTransform(
     scrollYProgressText,
     [1, 0],
-    ["80vh", "100vh"],
+    ["80vh", "105vh"],
     { ease: circOut }
   );
 
@@ -92,14 +93,12 @@ export default function Pool() {
             </motion.div>
           );
         })}
-        <motion.h2
-          style={{ y: textParallax }}
-          className={`${playfair.className} text-8xl text-center z-40`}
-        >
-          Concediti un momento di puro piacere
-          <br />
-          nella nostra piscina salata
-        </motion.h2>
+        <motion.div style={{ y: textParallax }}>
+          <H2 className={`text-center z-40`}>
+            Concediti un momento di puro piacere
+          </H2>
+          <H2 className={`text-center z-40`}>nella nostra piscina salata</H2>
+        </motion.div>
       </div>
     </div>
   );

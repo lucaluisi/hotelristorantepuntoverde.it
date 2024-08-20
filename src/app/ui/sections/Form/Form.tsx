@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { playfair } from "../../fonts";
 import { sendForm, State } from "@/lib/actions";
 import { useActionState } from "react";
+import { H4 } from "@/components/ui/text";
 
 export default function Form() {
   const initialState: State = { message: null, errors: {} };
@@ -19,7 +20,7 @@ export default function Form() {
       aria-describedby="message"
     >
       <div>
-        <h2 className={`${playfair.className} text-7xl`}>Contattaci</h2>
+        <H4 className="text-7xl">Contattaci</H4>
       </div>
       <div className="min-w-[50vw] flex flex-col gap-10">
         <div>
@@ -81,7 +82,12 @@ export default function Form() {
         aria-atomic="true"
       >
         {state.message && (
-          <p className={`mt-2 text-sm ${state.success ? "text-green-500" : "text-red-500"}`} key={state.message}>
+          <p
+            className={`mt-2 text-sm ${
+              state.success ? "text-green-500" : "text-red-500"
+            }`}
+            key={state.message}
+          >
             {state.message}
           </p>
         )}

@@ -4,6 +4,7 @@ import { useScroll } from "framer-motion";
 import Card from "../../components/Card";
 import FloatingImages from "../../components/FloatingImages";
 import { roomsImages, restaurantImages } from "./data";
+import { H2, H3 } from "@/components/ui/text";
 
 export default function RoomsRestaurant() {
   const container = useRef(null);
@@ -16,13 +17,15 @@ export default function RoomsRestaurant() {
     {
       content: (
         <FloatingImages {...roomsImages}>
-          <h2 className={`${playfair.className} text-7xl text-center z-40`}>
-            Coccola te stesso in camere luminose e
-            <br />
-            accoglienti dopo un'emozionante giornata di
-            <br />
-            esplorazione locale
-          </h2>
+          <div className="z-40">
+            <H3 className="text-center">
+              Coccola te stesso in camere luminose e
+            </H3>
+            <H3 className="text-center">
+              accoglienti dopo un'emozionante giornata di
+            </H3>
+            <H3 className="text-center">esplorazione locale</H3>
+          </div>
         </FloatingImages>
       ),
       color: "black",
@@ -30,13 +33,15 @@ export default function RoomsRestaurant() {
     {
       content: (
         <FloatingImages {...restaurantImages}>
-          <h2 className={`${playfair.className} text-7xl text-center z-40`}>
-            Coccola te stesso in camere luminose e
-            <br />
-            accoglienti dopo un'emozionante giornata di
-            <br />
-            esplorazione locale
-          </h2>
+          <div className="z-40">
+            <H3 className="text-center">
+              Coccola te stesso in camere luminose e
+            </H3>
+            <H3 className="text-center">
+              accoglienti dopo un'emozionante giornata di
+            </H3>
+            <H3 className="text-center">esplorazione locale</H3>
+          </div>
         </FloatingImages>
       ),
       color: "black",

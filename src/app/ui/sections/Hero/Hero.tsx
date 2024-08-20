@@ -1,4 +1,4 @@
-import H1 from "@/components/ui/text";
+import { H1 } from "@/components/ui/text";
 import { motion, useScroll, useTransform, circIn } from "framer-motion";
 import { useRef } from "react";
 
