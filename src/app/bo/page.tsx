@@ -1,19 +1,7 @@
 "use client";
 
-import { useActionState } from "react";
+import H1 from "@/components/ui/text";
 
-async function increment(previousState: any, formData: any) {
-  return previousState + 1;
+export default function ciao() {
+  return <H1>hotel Ristorante punto verde</H1>;
 }
-
-function StatefulForm({}) {
-  const [state, formAction] = useActionState(increment, 0);
-  return (
-    <form>
-      {state}
-      <button formAction={formAction}>Increment</button>
-    </form>
-  )
-}
-
-export default StatefulForm;

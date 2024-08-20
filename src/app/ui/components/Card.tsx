@@ -1,6 +1,5 @@
-import { MotionValue, useTransform, motion, useAnimate } from "framer-motion";
-import { before } from "node:test";
-import { ReactNode, useEffect } from "react";
+import { MotionValue, useTransform, motion } from "framer-motion";
+import { ReactNode } from "react";
 
 export default function Card({
   i,

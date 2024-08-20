@@ -1,4 +1,4 @@
-import { playfair } from "@/app/ui/fonts";
+import H1 from "@/components/ui/text";
 import { motion, useScroll, useTransform, circIn } from "framer-motion";
 import { useRef } from "react";
 
@@ -19,13 +19,9 @@ export default function Hero() {
         style={{ opacity: opacity }}
         className="sticky top-0 h-[100vh] min-h-dvh overflow-hidden flex justify-center"
       >
-        <motion.h1
-          initial={{ y: "100vh" }}
-          animate={{ y: "85vh" }}
-          className={`relative z-30 text-5xl lg:text-[10rem] text-center ${playfair.className}`}
-        >
+        <H1 className="absolute bottom-10 z-30 text-center">
           Hotel Ristorante Punto Verde
-        </motion.h1>
+        </H1>
         <video
           autoPlay
           muted
