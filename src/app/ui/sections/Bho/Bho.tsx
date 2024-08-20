@@ -135,9 +135,9 @@ export default function Bho() {
         >
           Noi ci differenziamo
           <br />
-          per l'accoglienza,
+          per l&apos;accoglienza,
           <br />
-          l'amicizia e l'ottima
+          l&apos;amicizia e l&apos;ottima
           <br />
           cucina meridionale
         </motion.h2>
