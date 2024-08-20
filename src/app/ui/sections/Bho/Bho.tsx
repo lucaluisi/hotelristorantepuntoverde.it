@@ -29,7 +29,13 @@ export default function Bho() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1 }}
+            transition={{
+              duration: .6,
+              stiffness: 20,
+              damping: 15,
+              mass: 2,
+              type: "spring",
+            }}
             className="w-[50vw] h-[55vh] top-[10vh] left-[10vw] absolute overflow-hidden"
           >
             <Image
@@ -43,7 +49,13 @@ export default function Bho() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1 }}
+            transition={{
+              duration: .6,
+              stiffness: 20,
+              damping: 15,
+              mass: 2,
+              type: "spring",
+            }}
             className="w-[40vw] h-[40vh] bottom-[10vh] right-[10vw] absolute overflow-hidden"
           >
             <Image
@@ -74,7 +86,13 @@ export default function Bho() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1 }}
+            transition={{
+              duration: .6,
+              stiffness: 20,
+              damping: 15,
+              mass: 2,
+              type: "spring",
+            }}
             className="w-[30vw] h-[65vh] top-[10vh] left-[15vw] z-20 absolute overflow-hidden"
           >
             <Image
@@ -84,10 +102,19 @@ export default function Bho() {
               alt="image"
             />
           </motion.div>
-          <motion.div initial={{opacity: 0}}
-            whileInView={{opacity: 1}}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1 }} className="w-[50vw] h-[55vh] bottom-[10vh] right-[10vw] z-10 absolute overflow-hidden">
+            transition={{
+              duration: .6,
+              stiffness: 20,
+              damping: 15,
+              mass: 2,
+              type: "spring",
+            }}
+            className="w-[50vw] h-[55vh] bottom-[10vh] right-[10vw] z-10 absolute overflow-hidden"
+          >
             <Image
               src="/restaurant/tagliatelle_ragu.jpg"
               className="h-full object-cover"

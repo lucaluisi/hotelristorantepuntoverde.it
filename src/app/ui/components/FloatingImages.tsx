@@ -3,6 +3,7 @@
 import Image, { StaticImageData } from "next/image";
 import { useRef, MouseEvent } from "react";
 import gsap from "gsap";
+import { motion } from "framer-motion";
 
 export default function FloatingImages({
   img1,
@@ -85,53 +86,149 @@ export default function FloatingImages({
         ref={plane1}
         className={`w-full h-full absolute brightness-[85%] z-30`}
       >
-        <Image
-          alt="image"
-          src={img1}
-          className="w-[23rem] absolute left-[75%] top-[70%]"
-        />
-        <Image
-          alt="image"
-          src={img2}
-          className="w-[23rem] absolute left-[8%] top-[65%]"
-        />
-        <Image
-          alt="image"
-          src={img3}
-          className="w-[23rem] absolute left-[28%] top-[9%]"
-        />
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.6,
+            stiffness: 20,
+            damping: 15,
+            mass: 2,
+          }}
+        >
+          <Image
+            alt="image"
+            src={img1}
+            className="w-[23rem] absolute left-[75%] top-[70%]"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.6,
+            stiffness: 20,
+            damping: 15,
+            mass: 2,
+          }}
+        >
+          <Image
+            alt="image"
+            src={img2}
+            className="w-[23rem] absolute left-[8%] top-[65%]"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.6,
+            stiffness: 20,
+            damping: 15,
+            mass: 2,
+          }}
+        >
+          <Image
+            alt="image"
+            src={img3}
+            className="w-[23rem] absolute left-[28%] top-[9%]"
+          />
+        </motion.div>
       </div>
       <div
         ref={plane2}
         className={`w-full h-full absolute brightness-[70%] z-20`}
       >
-        <Image
-          alt="image"
-          src={img4}
-          className="w-[23rem] absolute left-[5%] top-[15%]"
-        />
-        <Image
-          alt="image"
-          src={img5}
-          className="w-[23rem] absolute left-[70%] top-[20%]"
-        />
-        <Image
-          alt="image"
-          src={img6}
-          className="w-[23rem] absolute left-[55%] top-[60%]"
-        />
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.6,
+            stiffness: 20,
+            damping: 15,
+            mass: 2,
+          }}
+        >
+          <Image
+            alt="image"
+            src={img4}
+            className="w-[23rem] absolute left-[5%] top-[15%]"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.6,
+            stiffness: 20,
+            damping: 15,
+            mass: 2,
+          }}
+        >
+          <Image
+            alt="image"
+            src={img5}
+            className="w-[23rem] absolute left-[70%] top-[20%]"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.6,
+            stiffness: 20,
+            damping: 15,
+            mass: 2,
+          }}
+        >
+          <Image
+            alt="image"
+            src={img6}
+            className="w-[23rem] absolute left-[55%] top-[60%]"
+          />
+        </motion.div>
       </div>
       <div ref={plane3} className={`w-full h-full absolute brightness-50 z-10`}>
-        <Image
-          alt="image"
-          src={img7}
-          className="w-[23rem] absolute left-[55%] top-[5%]"
-        />
-        <Image
-          alt="image"
-          src={img8}
-          className="w-[23rem] absolute left-[30%] top-[75%]"
-        />
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.6,
+            stiffness: 20,
+            damping: 15,
+            mass: 2,
+          }}
+        >
+          <Image
+            alt="image"
+            src={img7}
+            className="w-[23rem] absolute left-[55%] top-[5%]"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.6,
+            stiffness: 20,
+            damping: 15,
+            mass: 2,
+          }}
+        >
+          <Image
+            alt="image"
+            src={img8}
+            className="w-[23rem] absolute left-[30%] top-[75%]"
+          />
+        </motion.div>
       </div>
       {children}
     </div>

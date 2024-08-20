@@ -74,6 +74,16 @@ export default function Pool() {
         {pictures.map(({ src, scale }, index) => {
           return (
             <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                stiffness: 20,
+                damping: 15,
+                mass: 2,
+                type: "spring",
+              }}
               style={{ scale: scale }}
               className={styles.el}
               key={index}
