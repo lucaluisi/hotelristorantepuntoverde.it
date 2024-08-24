@@ -92,7 +92,8 @@ export default function Footer() {
             <H4>Seguici su</H4>
             <Link
               key="instagram"
-              href="https://instagram"
+              href="https://www.instagram.com/punto_verde_noci?igsh=bmxwbmF1OW03cDNl"
+              target="_blank"
               className="flex justify-center gap-3"
             >
               <Image src={Instagram} alt="instagram" className="w-5" />
@@ -100,7 +101,8 @@ export default function Footer() {
             </Link>
             <Link
               key="facebook"
-              href="https://facebook.com"
+              href="https://www.facebook.com/puntoverde.hotelnoci"
+              target="_blank"
               className="flex justify-center gap-3"
             >
               <Image src={Facebook} alt="facebook" className="w-5" />

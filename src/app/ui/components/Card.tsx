@@ -25,7 +25,7 @@ export default function Card({
           scale: scale,
           top: `calc(-5% + ${i * 5}rem)`,
         }}
-        className="h-[80vh] w-[80vw] relative -top-[5%] border bg-background"
+        className="h-[80vh] w-[80vw] relative -top-[5%] border-2 bg-background"
       >
         {content}
       </motion.div>
