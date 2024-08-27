@@ -23,7 +23,7 @@ export default function Bho() {
 
   return (
     <>
-      <section className="h-[100vh] flex justify-center items-center relative">
+      <section className="z-0 h-[100vh] flex justify-center items-center relative">
         <div ref={ref1}>
           <motion.div
             initial={{ opacity: 0 }}
@@ -31,10 +31,6 @@ export default function Bho() {
             viewport={{ once: true }}
             transition={{
               duration: 0.6,
-              stiffness: 20,
-              damping: 15,
-              mass: 2,
-              type: "spring",
             }}
             className="w-[50vw] h-[55vh] top-[10vh] left-[10vw] absolute overflow-hidden"
           >
@@ -51,10 +47,6 @@ export default function Bho() {
             viewport={{ once: true }}
             transition={{
               duration: 0.6,
-              stiffness: 20,
-              damping: 15,
-              mass: 2,
-              type: "spring",
             }}
             className="w-[40vw] h-[40vh] bottom-[10vh] right-[10vw] absolute overflow-hidden"
           >
@@ -80,7 +72,7 @@ export default function Bho() {
         </motion.h2>
       </section>
 
-      <section className="h-[100vh] flex justify-center items-center relative">
+      <section className="z-0 h-[100vh] flex justify-center items-center relative">
         <div ref={ref2}>
           <motion.div
             initial={{ opacity: 0 }}
@@ -88,15 +80,11 @@ export default function Bho() {
             viewport={{ once: true }}
             transition={{
               duration: 0.6,
-              stiffness: 20,
-              damping: 15,
-              mass: 2,
-              type: "spring",
             }}
-            className="w-[30vw] h-[65vh] top-[10vh] left-[15vw] z-20 absolute overflow-hidden"
+            className="w-[50vw] h-[55vh] bottom-[10vh] right-[10vw] absolute overflow-hidden"
           >
             <Image
-              src="/restaurant/porchetta.jpg"
+              src="/restaurant/tagliatelle_ragu.jpg"
               className="h-full object-cover"
               fill
               alt="image"
@@ -108,15 +96,11 @@ export default function Bho() {
             viewport={{ once: true }}
             transition={{
               duration: 0.6,
-              stiffness: 20,
-              damping: 15,
-              mass: 2,
-              type: "spring",
             }}
-            className="w-[50vw] h-[55vh] bottom-[10vh] right-[10vw] z-10 absolute overflow-hidden"
+            className="w-[30vw] h-[65vh] top-[10vh] left-[15vw] absolute overflow-hidden"
           >
             <Image
-              src="/restaurant/tagliatelle_ragu.jpg"
+              src="/restaurant/porchetta.jpg"
               className="h-full object-cover"
               fill
               alt="image"
@@ -131,7 +115,7 @@ export default function Bho() {
             duration: 0.4,
           }}
           style={{ y: y2 }}
-          className={`${playfair.className} z-30 text-8xl text-center absolute left-[30%]`}
+          className={`${playfair.className} text-8xl text-center absolute left-[30%]`}
         >
           Noi ci differenziamo
           <br />

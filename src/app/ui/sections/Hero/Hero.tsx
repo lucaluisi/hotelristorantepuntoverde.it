@@ -19,14 +19,14 @@ export default function Hero() {
         style={{ opacity: opacity }}
         className="sticky top-0 h-[100vh] min-h-dvh overflow-hidden flex justify-center"
       >
-        <H1 className="absolute bottom-10 z-30 text-center">
+        <H1 className="absolute bottom-10 z-20 text-center">
           Hotel Ristorante Punto Verde
         </H1>
         <video
           autoPlay
           muted
           loop
-          className="absolute z-10 w-auto min-w-full min-h-full max-w-none brightness-75"
+          className="-z-50 absolute w-auto min-w-full min-h-full max-w-none brightness-75"
         >
           <source src="video.webm" type="video/webm" />
           <source src="video.mp4" type="video/mp4" />

@@ -4,10 +4,10 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { playfair } from "../../fonts";
 import { sendForm, State } from "@/lib/actions";
 import { useActionState } from "react";
 import { H4 } from "@/components/ui/text";
+import { motion } from "framer-motion";
 
 export default function Form() {
   const initialState: State = { message: null, errors: {} };
@@ -16,7 +16,7 @@ export default function Form() {
   return (
     <form
       action={formAction}
-      className="flex flex-col items-center justify-center h-dvh gap-10"
+      className="flex flex-col items-center justify-center min-h-dvh gap-10 p-12"
       aria-describedby="message"
     >
       <div>
@@ -24,13 +24,23 @@ export default function Form() {
       </div>
       <div className="min-w-[50vw] flex flex-col gap-10">
         <div>
-          <Label htmlFor="name">Nome</Label>
-          <Input
-            type="text"
-            id="name"
-            name="name"
-            aria-describedby="name-error"
-          />
+          <motion.div
+            initial={{ opacity: 0, y: "20%" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.3,
+              delay: 0.2,
+            }}
+          >
+            <Label htmlFor="name">Nome</Label>
+            <Input
+              type="text"
+              id="name"
+              name="name"
+              aria-describedby="name-error"
+            />
+          </motion.div>
           <div id="name-error" aria-live="polite" aria-atomic="true">
             {state.errors?.name &&
               state.errors.name.map((error: string) => (
@@ -41,13 +51,23 @@ export default function Form() {
           </div>
         </div>
         <div>
-          <Label htmlFor="email">Email</Label>
-          <Input
-            type="text"
-            id="email"
-            name="email"
-            aria-describedby="email-error"
-          />
+          <motion.div
+            initial={{ opacity: 0, y: "20%" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.3,
+              delay: 0.4,
+            }}
+          >
+            <Label htmlFor="email">Email</Label>
+            <Input
+              type="text"
+              id="email"
+              name="email"
+              aria-describedby="email-error"
+            />
+          </motion.div>
           <div id="email-error" aria-live="polite" aria-atomic="true">
             {state.errors?.email &&
               state.errors.email.map((error: string) => (
@@ -58,12 +78,22 @@ export default function Form() {
           </div>
         </div>
         <div>
-          <Label htmlFor="message">Messaggio</Label>
-          <Textarea
-            id="message"
-            name="message"
-            aria-describedby="message-error"
-          />
+          <motion.div
+            initial={{ opacity: 0, y: "20%" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.3,
+              delay: 0.6,
+            }}
+          >
+            <Label htmlFor="message">Messaggio</Label>
+            <Textarea
+              id="message"
+              name="message"
+              aria-describedby="message-error"
+            />
+          </motion.div>
           <div id="message-error" aria-live="polite" aria-atomic="true">
             {state.errors?.message &&
               state.errors.message.map((error: string) => (
@@ -73,7 +103,18 @@ export default function Form() {
               ))}
           </div>
         </div>
-        <Button className="w-full">Invia</Button>
+        <motion.div
+          initial={{ opacity: 0, y: "20%" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.3,
+            delay: 0.8,
+          }}
+          className="z-20 mix-blend-difference"
+        >
+          <Button className="w-full">Invia</Button>
+        </motion.div>
       </div>
       <div
         id="message"

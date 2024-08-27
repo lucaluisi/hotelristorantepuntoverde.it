@@ -80,10 +80,7 @@ export default function Pool() {
               viewport={{ once: true }}
               transition={{
                 duration: 0.6,
-                stiffness: 20,
-                damping: 15,
-                mass: 2,
-                type: "spring",
+                delay: 0.2 + index * 0.1,
               }}
               style={{ scale: scale }}
               className={styles.el}

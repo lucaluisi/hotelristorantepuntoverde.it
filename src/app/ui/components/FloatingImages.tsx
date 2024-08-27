@@ -92,9 +92,6 @@ export default function FloatingImages({
           viewport={{ once: true }}
           transition={{
             duration: 0.6,
-            stiffness: 20,
-            damping: 15,
-            mass: 2,
           }}
         >
           <Image
@@ -109,9 +106,6 @@ export default function FloatingImages({
           viewport={{ once: true }}
           transition={{
             duration: 0.6,
-            stiffness: 20,
-            damping: 15,
-            mass: 2,
           }}
         >
           <Image
@@ -126,9 +120,6 @@ export default function FloatingImages({
           viewport={{ once: true }}
           transition={{
             duration: 0.6,
-            stiffness: 20,
-            damping: 15,
-            mass: 2,
           }}
         >
           <Image
@@ -148,9 +139,6 @@ export default function FloatingImages({
           viewport={{ once: true }}
           transition={{
             duration: 0.6,
-            stiffness: 20,
-            damping: 15,
-            mass: 2,
           }}
         >
           <Image
@@ -165,9 +153,6 @@ export default function FloatingImages({
           viewport={{ once: true }}
           transition={{
             duration: 0.6,
-            stiffness: 20,
-            damping: 15,
-            mass: 2,
           }}
         >
           <Image
@@ -182,9 +167,6 @@ export default function FloatingImages({
           viewport={{ once: true }}
           transition={{
             duration: 0.6,
-            stiffness: 20,
-            damping: 15,
-            mass: 2,
           }}
         >
           <Image
@@ -201,9 +183,6 @@ export default function FloatingImages({
           viewport={{ once: true }}
           transition={{
             duration: 0.6,
-            stiffness: 20,
-            damping: 15,
-            mass: 2,
           }}
         >
           <Image
@@ -218,9 +197,6 @@ export default function FloatingImages({
           viewport={{ once: true }}
           transition={{
             duration: 0.6,
-            stiffness: 20,
-            damping: 15,
-            mass: 2,
           }}
         >
           <Image
