@@ -16,12 +16,12 @@ export async function GET(req: NextRequest) {
 
   if (thumbnail) {
     const thumbnailImage = fs.readFileSync(
-      path.join(imgDir, dirname, `${basename}-thumbnail.jpg`)
+      path.join(process.cwd(), imgDir, dirname, `${basename}-thumbnail.jpg`)
     );
     return new Response(thumbnailImage);
   }
 
-  const imagePath = path.join(imgDir, src);
+  const imagePath = path.join(process.cwd(), imgDir, src);
   const originalImage = fs.readFileSync(imagePath);
 
   const resizedImageBuffer = await sharp(originalImage)

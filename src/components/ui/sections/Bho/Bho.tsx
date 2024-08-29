@@ -1,3 +1,4 @@
+import { playfair } from "@/components/ui/fonts";
 import { CustomImage } from "@/components/ui/image";
 import {
   motion,
@@ -48,7 +49,7 @@ export default function Bho() {
         </div>
         <motion.h2
           style={{ y: y1 }}
-          className="text-8xl text-center absolute left-[40%]"
+          className={`${playfair.className} text-8xl text-center absolute left-[40%]`}
         >
           Immerso nella
           <br />
@@ -93,7 +94,7 @@ export default function Bho() {
             duration: 0.4,
           }}
           style={{ y: y2 }}
-          className="text-8xl text-center absolute left-[30%]"
+          className={`${playfair.className} text-8xl text-center absolute left-[30%]`}
         >
           Noi ci differenziamo
           <br />
