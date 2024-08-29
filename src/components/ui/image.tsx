@@ -16,7 +16,7 @@ export const CustomImage = ({src}: {src: string}) => {
     const props = [`w=${width}`];
     if (quality) props.push(`q=${quality}`);
     const queryStr = props.join("&");
-    return `http://localhost:3000/api/image?src=${src}&${queryStr}`;
+    return `/api/image?src=${src}&${queryStr}`;
   };
 
   const [isLoading, setIsLoading] = useState(true);
@@ -31,7 +31,7 @@ export const CustomImage = ({src}: {src: string}) => {
         src={src}
         className="object-cover h-full w-full"
         loader={({ src }) =>
-          `http://localhost:3000/api/image?src=${src}&thumbnail=true`
+          `/api/image?src=${src}&thumbnail=true`
         }
       />
       <Image
