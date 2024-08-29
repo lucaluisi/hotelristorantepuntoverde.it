@@ -1,10 +1,17 @@
 import React, { useRef } from "react";
-import { playfair } from "@/app/ui/fonts";
 import { useScroll } from "framer-motion";
-import Card from "../../components/Card";
-import FloatingImages from "../../components/FloatingImages";
 import { roomsImages, restaurantImages } from "./data";
 import { H2, H3 } from "@/components/ui/text";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import CustomCard from "@/components/ui/customCard";
+import { Card, CardContent } from "@/components/ui/card";
+import { CustomImage } from "@/components/ui/image";
 
 export default function RoomsRestaurant() {
   const container = useRef(null);
@@ -13,38 +20,17 @@ export default function RoomsRestaurant() {
     offset: ["start", "end"],
   });
 
+  //   Coccola te stesso in camere luminose e
+  // accoglienti dopo un'emozionante giornata di
+  // esplorazione locale
   const cards = [
     {
-      content: (
-        <FloatingImages {...roomsImages}>
-          <div className="z-40">
-            <H3 className="text-center">
-              Coccola te stesso in camere luminose e
-            </H3>
-            <H3 className="text-center">
-              accoglienti dopo un&apos;emozionante giornata di
-            </H3>
-            <H3 className="text-center">esplorazione locale</H3>
-          </div>
-        </FloatingImages>
-      ),
-      color: "black",
+      text: "Coccola te stesso in camere luminose e accoglienti dopo un'emozionante giornata di esplorazione locale",
+      images: roomsImages,
     },
     {
-      content: (
-        <FloatingImages {...restaurantImages}>
-          <div className="z-40">
-            <H3 className="text-center">
-              Coccola te stesso in camere luminose e
-            </H3>
-            <H3 className="text-center">
-              accoglienti dopo un&apos;emozionante giornata di
-            </H3>
-            <H3 className="text-center">esplorazione locale</H3>
-          </div>
-        </FloatingImages>
-      ),
-      color: "black",
+      text: "Coccola te stesso in camere luminose e accoglienti dopo un'emozionante giornata di esplorazione locale",
+      images: restaurantImages,
     },
   ];
 
@@ -53,14 +39,16 @@ export default function RoomsRestaurant() {
       {cards.map((card, index) => {
         const targetScale = 1 - (cards.length - index) * 0.05;
         return (
-          <Card
+          <CustomCard
             key={index}
-            {...card}
+            images={card.images}
             i={index}
             progress={scrollYProgress}
             range={[index * 0.25, 1]}
             targetScale={targetScale}
-          />
+          >
+            {card.text}
+          </CustomCard>
         );
       })}
     </div>

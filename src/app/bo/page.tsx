@@ -1,9 +1,32 @@
-import { CustomImage } from "@/components/ui/image";
+import * as React from "react"
 
-export default function Page() {
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
+export default function CarouselDemo() {
   return (
-      <div className="size-80 rounded-md overflow-hidden">
-        <CustomImage src="noci/gnostre.webp" />
-      </div>
-  );
+    <Carousel className="w-1/2">
+      <CarouselContent>
+        {Array.from({ length: 10 }).map((_, index) => (
+          <CarouselItem key={index}>
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6">
+                  <span className="text-4xl font-semibold">{index + 1}</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  )
 }

@@ -40,7 +40,7 @@ export const CustomImage = ({src}: {src: string}) => {
         src={src}
         className={`
             object-cover h-full w-full
-            transition-opacity duration-500 ease-in-out 
+            transition-opacity duration-500 ease-in-out
             ${isLoading ? "opacity-0" : "opacity-100"}
         `}
         loader={loader}
