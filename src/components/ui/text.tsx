@@ -39,7 +39,7 @@ const H1: React.FC<HeadingProps> = (props) => {
       className={`text-5xl lg:text-[10rem] overflow-hidden flex flex-wrap gap-x-7 justify-center ${playfair.className} ${props.className}`}
     >
       {props.children?.split(" ").map((word, i) => (
-        <div className="inline-block overflow-hidden">
+        <div key={i} className="inline-block overflow-hidden">
           {word
             .split("")
             .map((letter, j) => animateLetter(letter, (i * (i + 1)) / 2 + j))}
@@ -60,7 +60,7 @@ const H2: React.FC<HeadingProps> = (props) => {
       className={`text-8xl overflow-hidden flex flex-wrap gap-x-5 justify-center ${playfair.className} ${props.className}`}
     >
       {props.children?.split(" ").map((word, i) => (
-        <div className="inline-block overflow-hidden">
+        <div key={i} className="inline-block overflow-hidden">
           {word.split("").map((letter, j) => animateLetter(letter, (i * (i + 1)) / 2 + j))}
         </div>
       ))}
@@ -79,7 +79,7 @@ const H3: React.FC<HeadingProps> = (props) => {
       className={`text-7xl overflow-hidden flex flex-wrap gap-x-5 justify-center ${playfair.className} ${props.className}`}
     >
       {props.children?.split(" ").map((word, i) => (
-        <div className="inline-block overflow-hidden">
+        <div key={i} className="inline-block overflow-hidden">
           {word.split("").map((letter, j) => animateLetter(letter, (i * (i + 1)) / 2 + j))}
         </div>
       ))}
@@ -97,7 +97,7 @@ const H4: React.FC<HeadingProps> = (props) => {
       className={`text-4xl overflow-hidden ${playfair.className} ${props.className}`}
     >
       {props.children?.split(" ").map((word, i) => (
-        <div className="inline-block overflow-hidden">
+        <div key={i} className="inline-block overflow-hidden">
           {word
             .split("")
             .map((letter, j) => animateLetter(letter, (i * (i + 1)) / 2 + j))}
