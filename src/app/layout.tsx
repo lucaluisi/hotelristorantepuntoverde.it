@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import StickyCursor from "@/components/StickyCursor";
-
-const inter = Inter({ subsets: ["latin"] });
+import { playfair } from "@/components/ui/fonts";
 
 export const metadata: Metadata = {
   title: "Hotel Ristorante Punto Verde",
@@ -17,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} dark`}>
+      <body className={`${playfair.className} dark`}>
         <StickyCursor />
         {children}
       </body>
