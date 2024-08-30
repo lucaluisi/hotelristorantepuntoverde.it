@@ -29,17 +29,17 @@ export default function CustomCard({
           scale: scale,
           top: `calc(-5% + ${i * 5}rem)`,
         }}
-        className="h-[80vh] w-[80vw] relative -top-[5%] border-2 bg-background"
+        className="h-[75vh] w-[90vw] lg:h-[80vh] lg:w-[80vw] relative -top-[5%] border-2 bg-background"
       >
-        <div className="flex items-center justify-center h-full w-full">
-          <H3 className="text-center px-20">
+        <div className="flex flex-col lg:flex-row justify-evenly items-center lg:justify-center h-full w-full">
+          <H3 className="text-center px-5 xl:px-20 max-w-1/2">
             {children}
           </H3>
           <Carousel opts={{ loop: true }} className="flex items-center">
-            <CarouselPrevious className="size-32 left-16 z-10" />
+            <CarouselPrevious className="size-16 left-8 md:size-24 md:left-12 xl:size-32 xl:left-16 z-10" />
             <CarouselContent>
               {images.map((image, index) => (
-                <CarouselItem key={index} className="w-20">
+                <CarouselItem key={index} className="w-9 md:w-11 2xl:w-20">
                   <div className="p-1">
                     <Card>
                       <CardContent className="flex aspect-[3/4] items-center justify-center p-0">
@@ -50,7 +50,7 @@ export default function CustomCard({
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselNext className="size-32 right-16" />
+            <CarouselNext className="size-16 right-8 md:size-24 md:right-12 xl:size-32 xl:right-16" />
           </Carousel>
         </div>
       </motion.div>

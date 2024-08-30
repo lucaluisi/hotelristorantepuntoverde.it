@@ -10,11 +10,11 @@ export default function Pool() {
   const container = useRef(null);
   const { scrollYProgress: scrollYProgressImages } = useScroll({
     target: container,
-    offset: ["start", "60%"],
+    offset: ["start", "80%"],
   });
   const { scrollYProgress: scrollYProgressText } = useScroll({
     target: container,
-    offset: ["40%", "60%"],
+    offset: ["40%", "80%"],
   });
 
   const scale4 = useTransform(scrollYProgressImages, [0, 1], [1, 4]);
@@ -24,8 +24,8 @@ export default function Pool() {
   const scale9 = useTransform(scrollYProgressImages, [0, 1], [1, 9]);
   const textParallax = useTransform(
     scrollYProgressText,
-    [1, 0],
-    ["80vh", "105vh"],
+    [0, 1],
+    ["105vh", "0.01vh"],
     { ease: circOut }
   );
 
@@ -62,7 +62,7 @@ export default function Pool() {
 
   return (
     <div ref={container} className={styles.container}>
-      <div className={styles.sticky}>
+      <div className={`${styles.sticky} flex items-center xl:items-end xl:pb-20`}>
         {pictures.map(({ src, scale }, index) => {
           return (
             <motion.div
@@ -82,7 +82,7 @@ export default function Pool() {
           );
         })}
         <motion.div style={{ y: textParallax }}>
-          <H2 className="text-center z-40 px-20">
+          <H2 className="text-center z-40 px-5 xl:px-20">
             Concediti un momento di puro piacere nella nostra piscina salata
           </H2>
         </motion.div>

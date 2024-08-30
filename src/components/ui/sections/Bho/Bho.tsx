@@ -1,11 +1,6 @@
 import { playfair } from "@/components/ui/fonts";
 import { CustomImage } from "@/components/ui/image";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  MotionValue,
-} from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import { useRef } from "react";
 
 function useParallax(value: MotionValue<number>, distance: number) {
@@ -49,7 +44,9 @@ export default function Bho() {
         </div>
         <motion.h2
           style={{ y: y1 }}
-          className={`${playfair.className} text-8xl text-center absolute left-[40%]`}
+          className={`
+            text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
+            ${playfair.className} text-center absolute left-[30%]`}
         >
           Immerso nella
           <br />
@@ -94,7 +91,8 @@ export default function Bho() {
             duration: 0.4,
           }}
           style={{ y: y2 }}
-          className={`${playfair.className} text-8xl text-center absolute left-[30%]`}
+          // {/** text-7xl sm:text-8xl md:text-9xl lg:text-[9rem] xl:text-[10rem] */}
+          className={`${playfair.className} text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center absolute left-[30%]`}
         >
           Noi ci differenziamo
           <br />

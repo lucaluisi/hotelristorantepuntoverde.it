@@ -36,7 +36,10 @@ const H1: React.FC<HeadingProps> = (props) => {
       whileInView="animate"
       transition={{ delay: ANIMATION_START_DELAY }}
       viewport={{ once: true }}
-      className={`text-7xl sm:text-6xl lg:text-[10rem] overflow-hidden flex flex-wrap gap-x-4 lg:gap-x-7 justify-center ${playfair.className} ${props.className}`}
+      className={`
+        text-7xl sm:text-8xl md:text-9xl lg:text-[9rem] xl:text-[10rem]
+        gap-x-4 md:gap-x-5 lg:gap-x-7
+        overflow-hidden flex flex-wrap justify-center ${playfair.className} ${props.className}`}
     >
       {props.children?.split(" ").map((word, i) => (
         <div key={i} className="inline-block overflow-hidden">
@@ -57,7 +60,10 @@ const H2: React.FC<HeadingProps> = (props) => {
       whileInView="animate"
       transition={{ delay: ANIMATION_START_DELAY }}
       viewport={{ once: true }}
-      className={`text-8xl overflow-hidden flex flex-wrap gap-x-5 justify-center ${playfair.className} ${props.className}`}
+      className={`
+        text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 
+        gap-x-1 md:gap-x-3 xl:gap-x-5
+        overflow-hidden flex flex-wrap justify-center ${playfair.className} ${props.className}`}
     >
       {props.children?.split(" ").map((word, i) => (
         <div key={i} className="inline-block overflow-hidden">
@@ -76,7 +82,9 @@ const H3: React.FC<HeadingProps> = (props) => {
       whileInView="animate"
       transition={{ delay: ANIMATION_START_DELAY }}
       viewport={{ once: true }}
-      className={`text-7xl overflow-hidden flex flex-wrap gap-x-5 justify-center ${playfair.className} ${props.className}`}
+      className={`text-2xl sm:text-3xl md:text-4xl xl:text-6xl 2xl:text-7xl
+        gap-x-1 md:gap-x-3 xl:gap-x-5
+        overflow-hidden flex flex-wrap justify-center ${playfair.className} ${props.className}`}
     >
       {props.children?.split(" ").map((word, i) => (
         <div key={i} className="inline-block overflow-hidden">
