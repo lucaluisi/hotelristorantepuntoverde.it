@@ -83,9 +83,8 @@ export default function Pool() {
         })}
         <motion.div style={{ y: textParallax }}>
           <H2 className={`text-center z-40`}>
-            Concediti un momento di puro piacere
+            Concediti un momento di puro piacere nella nostra piscina salata
           </H2>
-          <H2 className={`text-center z-40`}>nella nostra piscina salata</H2>
         </motion.div>
       </div>
     </div>

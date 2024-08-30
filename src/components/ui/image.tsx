@@ -43,6 +43,7 @@ export const CustomImage = ({src}: {src: string}) => {
             transition-opacity duration-500 ease-in-out
             ${isLoading ? "opacity-0" : "opacity-100"}
         `}
+        priority
         loader={loader}
         onLoad={() => setIsLoading(false)}
       />
