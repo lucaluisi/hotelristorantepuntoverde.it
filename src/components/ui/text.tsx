@@ -36,7 +36,7 @@ const H1: React.FC<HeadingProps> = (props) => {
       whileInView="animate"
       transition={{ delay: ANIMATION_START_DELAY }}
       viewport={{ once: true }}
-      className={`text-5xl lg:text-[10rem] overflow-hidden flex flex-wrap gap-x-7 justify-center ${playfair.className} ${props.className}`}
+      className={`text-7xl sm:text-6xl lg:text-[10rem] overflow-hidden flex flex-wrap gap-x-4 lg:gap-x-7 justify-center ${playfair.className} ${props.className}`}
     >
       {props.children?.split(" ").map((word, i) => (
         <div key={i} className="inline-block overflow-hidden">

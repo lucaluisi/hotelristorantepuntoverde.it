@@ -17,7 +17,7 @@ export default function Hero() {
     <div ref={container} className="h-[200vh] relative">
       <motion.div
         style={{ opacity: opacity }}
-        className="sticky top-0 h-[100vh] min-h-dvh overflow-hidden flex justify-center"
+        className="sticky top-0 min-h-dvh overflow-hidden flex justify-center"
       >
         <H1 className="absolute bottom-10 z-20 text-center">
           Hotel Ristorante Punto Verde
