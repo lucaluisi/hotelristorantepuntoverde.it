@@ -28,7 +28,7 @@ export default function Footer() {
         <Separator orientation="horizontal" className="bg-border h-[1px]" />
       </motion.div>
 
-      <footer className="flex flex-row items-center py-24">
+      <footer className="flex flex-col gap-12 md:gap-20 lg:gap-0 lg:flex-row items-center justify-center py-24">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -37,10 +37,11 @@ export default function Footer() {
             duration: 0.6,
             delay: 0.4,
           }}
+          className="lg:max-w-[40vw]"
         >
-          <Image src={Logo} alt="logo" className="h-[20vh]" />
+          <Image src={Logo} alt="logo" className="w-[70vw] lg:h-[20vh]" />
         </motion.div>
-        <div className="flex flex-row justify-center items-center gap-20 w-full">
+        <div className="flex flex-row justify-center items-center p-10 gap-8 sm:gap-14 lg:gap-20 w-full">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -49,7 +50,7 @@ export default function Footer() {
               duration: 0.6,
               delay: 0.6,
             }}
-            className="mix-blend-difference z-20"
+            className="mix-blend-difference z-20 h-20 flex items-center"
           >
             <Link
               key="tel1"
@@ -57,7 +58,7 @@ export default function Footer() {
               className="block"
               data-sticky
             >
-              <Image src={Telephone} alt="telephone" className="w-10" />{" "}
+              <Image src={Telephone} alt="telephone" className="w-9 sm:w-10" />
             </Link>
           </motion.div>
 
@@ -83,7 +84,7 @@ export default function Footer() {
               duration: 0.6,
               delay: 0.8,
             }}
-            className="mix-blend-difference z-20"
+            className="mix-blend-difference z-20 h-20 flex items-center"
           >
             <Link
               key="email"
@@ -91,7 +92,7 @@ export default function Footer() {
               className="block"
               data-sticky
             >
-              <Image src={Email} alt="email" className="w-10" />{" "}
+              <Image src={Email} alt="email" className="w-9 sm:w-10" />
             </Link>
           </motion.div>
 
@@ -117,7 +118,7 @@ export default function Footer() {
               duration: 0.6,
               delay: 1,
             }}
-            className="mix-blend-difference z-20"
+            className="mix-blend-difference z-20 h-20 flex items-center"
           >
             <Link
               key="instagram"
@@ -126,7 +127,7 @@ export default function Footer() {
               data-sticky
               className="block"
             >
-              <Image src={Instagram} alt="instagram" className="w-10" />
+              <Image src={Instagram} alt="instagram" className="w-9 sm:w-10" />
             </Link>
           </motion.div>
 
@@ -152,7 +153,7 @@ export default function Footer() {
               duration: 0.6,
               delay: 1.2,
             }}
-            className="mix-blend-difference z-20"
+            className="mix-blend-difference z-20 h-20 flex items-center"
           >
             <Link
               key="facebook"
@@ -161,7 +162,7 @@ export default function Footer() {
               className="block"
               data-sticky
             >
-              <Image src={Facebook} alt="facebook" className="w-10" />
+              <Image src={Facebook} alt="facebook" className="w-9 sm:w-10" />
             </Link>
           </motion.div>
         </div>

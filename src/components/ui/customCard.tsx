@@ -39,7 +39,7 @@ export default function CustomCard({
             <CarouselPrevious className="size-16 left-8 md:size-24 md:left-12 xl:size-32 xl:left-16 z-10" />
             <CarouselContent>
               {images.map((image, index) => (
-                <CarouselItem key={index} className="w-9 md:w-11 2xl:w-20">
+                <CarouselItem key={index} className="w-8 md:w-11 2xl:w-20">
                   <div className="p-1">
                     <Card>
                       <CardContent className="flex aspect-[3/4] items-center justify-center p-0">

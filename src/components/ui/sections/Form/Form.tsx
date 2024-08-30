@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { sendForm, State } from "@/lib/actions";
 import { useActionState } from "react";
-import { H4 } from "@/components/ui/text";
+import { H2 } from "@/components/ui/text";
 import { motion } from "framer-motion";
 
 export default function Form() {
@@ -16,11 +16,11 @@ export default function Form() {
   return (
     <form
       action={formAction}
-      className="flex flex-col items-center justify-center min-h-dvh gap-10 p-12"
+      className="flex flex-col items-center justify-center min-h-screen gap-10 p-12"
       aria-describedby="message"
     >
       <div>
-        <H4 className="text-7xl">Contattaci</H4>
+        <H2>Contattaci</H2>
       </div>
       <div className="min-w-[50vw] flex flex-col gap-10">
         <div>
