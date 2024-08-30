@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import StickyCursor from "@/components/StickyCursor";
+import { isMobileDevice } from "@/lib/mobileDetect";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,10 +16,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const mobile = isMobileDevice();
+
   return (
     <html lang="en">
       <body className={`${inter.className} dark`}>
-        <StickyCursor />
+        <StickyCursor isMobile={mobile} />
         {children}
       </body>
     </html>

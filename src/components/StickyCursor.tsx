@@ -33,7 +33,12 @@ const getDistanceFromRect = (rect: DOMRect, x: number, y: number) => {
   return Math.sqrt(dx * dx + dy * dy);
 };
 
-export default function StickyCursor() {
+export default function StickyCursor({ isMobile }: { isMobile: boolean }) {
+  if (isMobile) {
+    console.error("Mobile device detected, disabling sticky cursor");
+    return <></>;
+  }
+  
   const [isHovered, setIsHovered] = React.useState(false);
   const hoveredElementRef = React.useRef<HTMLElement | null>(null);
 
