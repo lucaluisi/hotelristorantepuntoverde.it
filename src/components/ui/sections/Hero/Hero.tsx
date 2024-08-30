@@ -17,7 +17,7 @@ export default function Hero() {
         <source src="video.webm" type="video/webm" />
         <source src="video.mp4" type="video/mp4" />
       </video> */}
-      <BackgroundVideo src="/api/video?url=video.webm" className="brightness-75 min-h-full min-w-full" />
+      <BackgroundVideo src="https://hotelristorantepuntoverde-it.vercel.app/api/video?url=video.webm" className="brightness-75 min-h-full min-w-full" />
     </div>
   );
 }
