@@ -16,7 +16,7 @@ export default function RoomsRestaurant() {
       images: roomsImages,
     },
     {
-      text: "Coccola te stesso in camere luminose e accoglienti dopo un'emozionante giornata di esplorazione locale",
+      text: "Lasciati sedurre da un'esplosione di sapori autentici che celebrano la nostra tradizione culinaria, in un ambiente caldo e accogliente.",
       images: restaurantImages,
     },
   ];
