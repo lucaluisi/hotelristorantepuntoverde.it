@@ -61,7 +61,7 @@ const H2: React.FC<HeadingProps> = (props) => {
       transition={{ delay: ANIMATION_START_DELAY }}
       viewport={{ once: true }}
       className={`
-        text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 
+        text-5xl md:text-6xl lg:text-7xl xl:text-8xl 
         gap-x-1 md:gap-x-3 xl:gap-x-5
         overflow-hidden flex flex-wrap justify-center ${playfair.className} ${props.className}`}
     >
