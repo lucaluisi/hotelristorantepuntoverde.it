@@ -1,6 +1,6 @@
 services:
   website:
-    image: nginx:latest
+    image: website:latest
     container_name: website
     networks:
       - network
