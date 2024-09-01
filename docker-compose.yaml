@@ -1,0 +1,12 @@
+services:
+  website:
+    image: nginx:latest
+    container_name: website
+    networks:
+      - network
+    expose:
+      - 80
+    restart: always
+
+networks:
+  network:
