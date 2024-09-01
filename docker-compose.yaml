@@ -1,6 +1,6 @@
 services:
   website:
-    image: website:latest
+    image: hotelristorantepuntoverde.it:latest
     container_name: website
     networks:
       - network
