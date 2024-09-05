@@ -31,31 +31,31 @@ export default function Pool() {
 
   const pictures = [
     {
-      src: <CustomImage src="pool/piscina.webp" />,
+      src: <CustomImage src="/pool/piscina.webp" />,
       scale: scale4,
     },
     {
-      src: <CustomImage src="rooms/1.jpg" />,
+      src: <CustomImage src="/rooms/1.jpg" />,
       scale: scale5,
     },
     {
-      src: <CustomImage src="rooms/2.jpg" />,
+      src: <CustomImage src="/rooms/2.jpg" />,
       scale: scale6,
     },
     {
-      src: <CustomImage src="rooms/3.jpg" />,
+      src: <CustomImage src="/rooms/3.jpg" />,
       scale: scale5,
     },
     {
-      src: <CustomImage src="rooms/4.jpg" />,
+      src: <CustomImage src="/rooms/4.jpg" />,
       scale: scale6,
     },
     {
-      src: <CustomImage src="rooms/5.jpg" />,
+      src: <CustomImage src="/rooms/5.jpg" />,
       scale: scale8,
     },
     {
-      src: <CustomImage src="rooms/6.jpg" />,
+      src: <CustomImage src="/rooms/6.jpg" />,
       scale: scale9,
     },
   ];

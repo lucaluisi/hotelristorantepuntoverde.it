@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { use, useEffect } from "react";
 import {
   SpringOptions,
   motion,
@@ -9,6 +9,7 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const SPRING_OPTIONS: SpringOptions = {
   damping: 20,
@@ -135,6 +136,22 @@ export default function StickyCursor({ isMobile }: { isMobile: boolean }) {
       };
     }
   }, [isHovered]);
+
+  // per colpa della splash screen non trovava gli oggetti con data-sticky e non funzionava
+  // mo sì
+  const pathname = usePathname();
+  useEffect(() => {
+    console.log("sono dentro");
+    if (isMobile || pathname !== "/") {
+      return;
+    }
+    const timeout = setTimeout(() => setIsHovered(true), 2200);
+    const timeout2 = setTimeout(() => setIsHovered(false), 2400);
+    return () => {
+      clearTimeout(timeout);
+      clearTimeout(timeout2);
+    };
+  }, []);
 
   if (!isMobile) {
     return (

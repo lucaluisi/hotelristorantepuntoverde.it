@@ -28,7 +28,7 @@ export default function Bho() {
             }}
             className="w-[50vw] h-[55vh] top-[10vh] left-[10vw] absolute overflow-hidden"
           >
-            <CustomImage src="noci/noci.webp" />
+            <CustomImage src="/noci/noci.webp" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -39,7 +39,7 @@ export default function Bho() {
             }}
             className="w-[40vw] h-[40vh] bottom-[10vh] right-[10vw] absolute overflow-hidden"
           >
-            <CustomImage src="noci/gnostre.webp" />
+            <CustomImage src="/noci/gnostre.webp" />
           </motion.div>
         </div>
         <motion.h2
@@ -69,7 +69,7 @@ export default function Bho() {
             }}
             className="w-[50vw] h-[55vh] bottom-[10vh] right-[10vw] absolute overflow-hidden"
           >
-            <CustomImage src="restaurant/tagliatelle_ragu.jpg" />
+            <CustomImage src="/restaurant/tagliatelle_ragu.jpg" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -80,7 +80,7 @@ export default function Bho() {
             }}
             className="w-[30vw] h-[65vh] top-[10vh] left-[15vw] absolute overflow-hidden"
           >
-            <CustomImage src="restaurant/porchetta.jpg" />
+            <CustomImage src="/restaurant/porchetta.jpg" />
           </motion.div>
         </div>
         <motion.h2

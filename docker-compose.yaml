@@ -1,11 +1,12 @@
 services:
   hotelristorantepuntoverde-it:
-    image: hotelristorantepuntoverde-it:latest
+    image: hotelristorantepuntoverde-it
     container_name: hotelristorantepuntoverde-it
+    build: .
     networks:
       - network
-    expose:
-      - 3000
+    ports:
+      - 3000:3000
     restart: always
 
 networks:
