@@ -5,8 +5,8 @@ services:
     build: .
     networks:
       - network
-    ports:
-      - 3000:3000
+    expose:
+      - 3000
     restart: always
 
 networks:
