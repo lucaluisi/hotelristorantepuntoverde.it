@@ -10,11 +10,11 @@ export default function Pool() {
   const container = useRef(null);
   const { scrollYProgress: scrollYProgressImages } = useScroll({
     target: container,
-    offset: ["start", "80%"],
+    offset: ["start", "50%"],
   });
   const { scrollYProgress: scrollYProgressText } = useScroll({
     target: container,
-    offset: ["40%", "80%"],
+    offset: ["20%", "50%"],
   });
 
   const scale4 = useTransform(scrollYProgressImages, [0, 1], [1, 4]);
