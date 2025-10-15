@@ -5,13 +5,13 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { sendForm, State } from "@/lib/actions";
-import { useFormState } from "react-dom";
 import { H2 } from "@/components/ui/text";
 import { motion } from "framer-motion";
+import { useActionState } from "react";
 
 export default function Form() {
   const initialState: State = { message: null, errors: {} };
-  const [state, formAction] = useFormState(sendForm, initialState);
+  const [state, formAction] = useActionState(sendForm, initialState);
 
   return (
     <form

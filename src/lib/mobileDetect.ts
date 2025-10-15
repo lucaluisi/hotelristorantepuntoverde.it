@@ -1,13 +1,13 @@
 import { headers } from "next/headers";
 
-export const isMobileDevice = () => {
+export const isMobileDevice = async () => {
   if (typeof process === "undefined") {
     throw new Error(
       "[Server method] you are importing a server-only module outside of server"
     );
   }
 
-  const { get } = headers();
+  const { get } = await headers();
   const ua = get("user-agent");
 
   const device = ua!.match(
