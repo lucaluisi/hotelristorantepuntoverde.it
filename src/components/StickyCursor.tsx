@@ -175,7 +175,7 @@ export default function StickyCursor({ isMobile }: { isMobile: boolean }) {
             scaleY: pointerShadowScale.y,
             rotate: pointerShadowAngle,
           }}
-          className="z-10 w-5 h-5 fixed bg-white rounded-full pointer-events-none"
+          className="z-50 w-5 h-5 fixed bg-white rounded-full pointer-events-none"
           animate={{
             width: cursorSize,
             height: cursorSize,
@@ -184,7 +184,7 @@ export default function StickyCursor({ isMobile }: { isMobile: boolean }) {
 
         <motion.div
           style={{ left: mouse.x, top: mouse.y }}
-          className="z-10 w-2 h-2 fixed bg-black border-white -translate-x-1/2 -translate-y-1/2 border rounded-full pointer-events-none"
+          className="z-50 w-2 h-2 fixed bg-black border-white -translate-x-1/2 -translate-y-1/2 border rounded-full pointer-events-none"
         />
       </>
     );

@@ -1,0 +1,28 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "../globals.css";
+import StickyCursor from "@/components/StickyCursor";
+import { isMobileDevice } from "@/lib/mobileDetect";
+import { cn } from "@/lib/utils";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Hotel Ristorante Punto Verde",
+  description: "Hotel Ristorante Punto Verde",
+};
+
+export default async function HomeLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  const mobile = await isMobileDevice();
+
+  return (
+    <body className={cn(`${inter.className} dark`)}>
+      <StickyCursor isMobile={mobile} />
+      {children}
+    </body>
+  );
+}
