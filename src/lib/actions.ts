@@ -3,6 +3,7 @@
 import { z } from "zod";
 import { Resend } from "resend";
 import { EmailTemplate } from "@/components/email/email-template";
+import { createElement } from "react";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -58,7 +59,7 @@ export async function sendForm(prevState: State, formData: FormData) {
     from: "Contact Form <no-reply@hotelristorantepuntoverde.it>",
     to: ["info@hotelristorantepuntoverde.it"],
     subject: "Nuovo messaggio dal form di contatto",
-    react: EmailTemplate({ name, email, message }),
+    react: createElement(EmailTemplate, { name, email, message }),
   });
 
   if (error) {
