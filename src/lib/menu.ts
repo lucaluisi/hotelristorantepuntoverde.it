@@ -131,7 +131,7 @@ export const menu = [
     image: "/menu/desserts/tiramisu.jpg",
     items: [
       {
-        category: "Fruits",
+        category: null,
         dishes: [
           { name: "Mixed seasonal fruit", price: 4, desc: null, image: null },
           { name: "Warm chocolate fondant", price: 5, desc: null, image: "/menu/desserts/tortino-cioccolato.webp" },

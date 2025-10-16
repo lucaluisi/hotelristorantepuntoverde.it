@@ -16,7 +16,11 @@ export function SectionCard({ title, href, image }: SectionProps) {
         className="overflow-hidden border border-white/20 rounded-2xl hover:border-white/40 transition-colors h-min flex justify-between items-center flex-col"
         whileHover={{ scale: 1.03 }}
       >
-        {image && <Image src={image} width={1000} height={1000} alt="image" className="w-full h-auto" />}
+        {image &&
+          <div className="size-full relative aspect-[4/3] overflow-hidden">
+            <Image src={image} fill alt="image" className="object-cover" />
+          </div>
+        }
         <h1 className="text-2xl font-bold py-5">
           {title}
           {/* <span className="hover:pl-10 pl-5">→</span> */}

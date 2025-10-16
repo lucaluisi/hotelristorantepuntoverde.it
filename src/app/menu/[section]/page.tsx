@@ -6,6 +6,7 @@ import Footer from "@/components/ui/sections/Footer/Footer";
 import { useEffect } from "react";
 import Lenis from "lenis";
 import React from "react";
+import Link from "next/link";
 
 export default function SectionPage({ params }: { params: Promise<{ section: string }> }) {
     // smooth scroll
@@ -34,7 +35,7 @@ export default function SectionPage({ params }: { params: Promise<{ section: str
 
     return (
         <>
-            <h1 className="text-4xl font-bold mb-8">{selectedSection.title}</h1>
+            <h1 className="font-bold mb-8 text-4xl">{selectedSection.title}</h1>
 
             {selectedSection.items.map((category, i) => (
                 <span key={i}>

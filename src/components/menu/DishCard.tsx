@@ -15,13 +15,17 @@ export function DishCard({ name, price, desc, image }: DishProps) {
       className="overflow-hidden border border-white/20 rounded-2xl hover:border-white/40 transition-colors h-min"
       whileHover={{ scale: 1.03 }}
     >
-      {image && <Image src={image} width={1000} height={1000} alt="image" className="w-full h-auto aspect-[3/2]" />}
+      {image &&
+        <div className="size-full relative aspect-[4/3] overflow-hidden">
+          <Image src={image} fill alt="image" className="object-cover" />
+        </div>
+      }
       <div className="p-5">
-        <div className="flex justify-between items-center mb-2">
+        <div className="flex justify-between items-center">
           <h3 className="text-lg font-medium">{name}</h3>
           <span className="text-gray-400">€ {price}</span>
         </div>
-        {desc && <p className="text-gray-500 text-sm">{desc}</p>}
+        {desc && <p className="text-gray-500 text-sm mt-2">{desc}</p>}
       </div>
     </motion.div>
   );
