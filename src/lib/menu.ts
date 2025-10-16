@@ -125,6 +125,23 @@ export const menu = [
       },
     ]
   },
+  {
+    title: "Fruits and Desserts",
+    href: "desserts",
+    image: null,
+    items: [
+      {
+        category: "Fruits",
+        dishes: [
+          { name: "Mixed seasonal fruit", price: 4, desc: null, image: null },
+          { name: "Warm chocolate fondant", price: 5, desc: null, image: "tortino-cioccolato.webp" },
+          { name: "Tiramisu", price: 4, desc: null, image: "tiramisu.jpg" },
+          { name: "Ice cream cup", price: 4, desc: null, image: "coppa-gelato.webp" },
+          { name: "Lemon sorbet", price: 4, desc: null, image: "sorbetto.webp" },
+        ]
+      }
+    ]
+  },
   // {
   //   title: "Drinks",
   //   href: "drinks",
