@@ -18,7 +18,11 @@ export async function GET(req: NextRequest) {
     const thumbnailImage = fs.readFileSync(
       path.join(process.cwd(), imgDir, dirname, `${basename}-thumbnail.jpg`)
     );
-    return new Response(thumbnailImage);
+    return new Response(new Uint8Array(thumbnailImage), {
+      headers: {
+        "Content-Type": "image/jpeg",
+      },
+    });
   }
 
   const imagePath = path.join(process.cwd(), imgDir, src);
@@ -29,7 +33,12 @@ export async function GET(req: NextRequest) {
     .resize(Number(width))
     .toBuffer();
 
-  return new Response(resizedImageBuffer);
+  return new Response(new Uint8Array(resizedImageBuffer), {
+    headers: {
+      "Content-Type": "image/png",
+      "Cache-Control": "public, max-age=31536000, immutable",
+    },
+  });
 }
 
 // export async function POST(req: NextRequest) {
