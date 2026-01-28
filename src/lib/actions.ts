@@ -1,11 +1,20 @@
 "use server";
 
 import { z } from "zod";
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 import { EmailTemplate } from "@/components/email/email-template";
 import { createElement } from "react";
+import { render } from "@react-email/render";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT),
+  secure: false,
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASSWORD,
+  },
+});
 
 const FormSchema = z.object({
   id: z.string(),
@@ -55,24 +64,26 @@ export async function sendForm(prevState: State, formData: FormData) {
 
   const { name, email, message } = validatedFields.data;
 
-  const { data, error } = await resend.emails.send({
-    from: "Contact Form <no-reply@hotelristorantepuntoverde.it>",
-    to: ["info@hotelristorantepuntoverde.it"],
-    subject: "Nuovo messaggio dal form di contatto",
-    react: createElement(EmailTemplate, { name, email, message }),
-  });
-
-  if (error) {
+  try {
+    transporter.sendMail({
+      from: `"Sito Web" <no-reply@hotelristorantepuntoverde.it>`,
+      to: "info@hotelristorantepuntoverde.it",
+      subject: "Nuovo messaggio dal form di contatto",
+      html: await render(createElement(EmailTemplate, { name, email, message })),
+      replyTo: email as string, // Permette di rispondere direttamente all'utente
+    });
+  } catch (error) {
     return {
       errors: {},
       message: "Error: Failed to send form.",
       success: false,
     };
-  } else {
-    return {
-      errors: {},
-      message: "Grazie. Ci metteremo in contatto con te al più presto.",
-      success: true,
-    };
   }
+
+  return {
+    errors: {},
+    message: "Grazie. Ci metteremo in contatto con te al più presto.",
+    success: true,
+  };
+
 }
