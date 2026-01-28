@@ -11,6 +11,7 @@ import {
   Text,
   Img,
   Link,
+  Button,
 } from "@react-email/components";
 
 interface EmailTemplateProps {
@@ -31,6 +32,8 @@ export const EmailTemplate: React.FC<EmailTemplateProps> = ({
   message,
 }) => {
   const logoUrl = `https://hotelristorantepuntoverde.it/logo/logo.png`;
+  const replyBody = `\n\n--- Messaggio originale di ${name} ---\n"${message}"`;
+  const mailtoUrl = `mailto:${email}?subject=R: Richiesta da ${name} - Hotel Ristorante Punto Verde&body=${encodeURIComponent(replyBody)}`;
 
   return (
     <Html>
@@ -92,6 +95,27 @@ export const EmailTemplate: React.FC<EmailTemplateProps> = ({
                 </td>
               </tr>
             </table>
+          </Section>
+
+          {/* Pulsante risposta */}
+          <Section style={{ textAlign: "center" as const, marginTop: "32px" }}>
+            <Button
+              style={{
+                backgroundColor: "#2d5a27",
+                borderRadius: "5px",
+                color: "#fff",
+                fontSize: "14px",
+                fontWeight: "bold",
+                textDecoration: "none",
+                textAlign: "center" as const,
+                display: "inline-block",
+                width: "auto",
+                padding: "12px 20px",
+              }}
+              href={mailtoUrl}
+            >
+              Rispondi
+            </Button>
           </Section>
 
           <Hr style={{ border: "1px solid #eaeaea", margin: "26px 0", width: "100%" }} />
