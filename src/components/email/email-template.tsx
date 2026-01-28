@@ -30,7 +30,7 @@ export const EmailTemplate: React.FC<EmailTemplateProps> = ({
   email,
   message,
 }) => {
-  const logoUrl = `https://hotelristorantepuntoverde.it/_next/static/media/logo.916ac175.png`;
+  const logoUrl = `https://hotelristorantepuntoverde.it/logo/logo.png`;
 
   return (
     <Html>
