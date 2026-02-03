@@ -2,6 +2,7 @@ services:
   hotelristorantepuntoverde-it:
     image: hotelristorantepuntoverde-it
     container_name: hotelristorantepuntoverde-it
+    env_file: ".env"
     build: .
     networks:
       - network
